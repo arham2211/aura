@@ -1,0 +1,17 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (2564fzi0bz42j1v4curv) or template name (aura-farming-dev) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("aura-farming-dev") # Sync sandbox
+# sandbox = await AsyncSandbox.create("aura-farming-dev") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('aura-farming-dev')
+
+team_id = "5351d217-a5d3-4b94-aba0-8edfa29fd4dc"
+start_cmd = "/compile_page.sh"
+dockerfile = "e2b.Dockerfile"
+template_name = "aura-farming-dev"
+template_id = "2564fzi0bz42j1v4curv"

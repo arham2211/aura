@@ -12,8 +12,8 @@ const Page = () => {
           <Image
             src="/logo.svg"
             alt="Aura"
-            width={50}
-            height={50}
+            width={90}
+            height={90}
             className="hidden md:block"
           />
         </div>

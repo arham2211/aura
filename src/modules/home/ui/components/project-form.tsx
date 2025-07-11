@@ -67,7 +67,7 @@ export const ProjectForm = () => {
       shouldValidate: true,
     });
   };
-
+  
   const [isFocused, setIsFocused] = useState(false);
   const isPending = createProject.isPending;
   const isButtonDisabled = isPending || !form.formState.isValid;
@@ -78,8 +78,10 @@ export const ProjectForm = () => {
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className={cn(
-            "relative border p-4 pt-1 rounded-xl bg-sidebar dark:bg-sidebar transition-all",
-            isFocused && "shadow-xs"
+            "relative border p-6 rounded-2xl bg-sidebar dark:bg-sidebar/80 backdrop-blur-sm transition-all",
+            isFocused 
+              ? "shadow-[0_0_20px_rgba(168,85,247,0.15)] border-purple-500/50" 
+              : "border-border/50"
           )}
         >
           <FormField
@@ -91,10 +93,10 @@ export const ProjectForm = () => {
                 disabled={isPending}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                minRows={2}
+                minRows={3}
                 maxRows={8}
-                className="pt-4 resize-none border-none w-full outline-none bg-transparent"
-                placeholder="What would you like to build"
+                className="pt-2 resize-none border-none w-full outline-none bg-transparent text-foreground text-lg"
+                placeholder="Describe what you'd like to build with Aura..."
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
                     e.preventDefault();
@@ -104,42 +106,42 @@ export const ProjectForm = () => {
               />
             )}
           />
-          <div className="flex gap-x-2 items-end justify-between pt-2">
-            <div className="text-[10px] text-muted-foreground font-mono">
+          <div className="flex gap-x-2 items-end justify-between pt-4">
+            <div className="text-[11px] text-muted-foreground font-mono">
               <kbd
-                className="ml-auto pointer-events-none inline-flex h-5 
-            select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] 
-            font-medium text-muted-foreground"
+                className="ml-auto pointer-events-none inline-flex h-6 
+                select-none items-center gap-1 rounded border bg-muted px-2 font-mono text-[11px] 
+                font-medium text-muted-foreground"
               >
-                <span>&#8984;</span>Enter
+                <span>&#8984;</span>Ctrl+Enter
               </kbd>
               &nbsp;to submit
             </div>
             <Button
               disabled={isButtonDisabled}
               className={cn(
-                "size-8 rounded-full",
-                isButtonDisabled && "bg-muted-foreground border"
+                "size-10 rounded-full bg-purple-600 hover:bg-purple-700 transition-all",
+                isButtonDisabled && "bg-muted-foreground border opacity-70"
               )}
             >
               {isPending ? (
-                <Loader2Icon className="size-4 animate-spin" />
+                <Loader2Icon className="size-5 animate-spin" />
               ) : (
-                <ArrowUpIcon />
+                <ArrowUpIcon className="size-5" />
               )}
             </Button>
           </div>
         </form>
-        <div className="flex-wrap justify-center gap-2 hidden md:flex max-w-3xl">
+        <div className="flex-wrap justify-center gap-3 hidden md:flex max-w-3xl">
           {PROJECT_TEMPLATES.map((template) => (
             <Button
               key={template.title}
               variant="outline"
               size="sm"
-              className="bg-white dark:bg-sidebar"
+              className="bg-white/80 dark:bg-sidebar/80 hover:bg-purple-50 dark:hover:bg-purple-900/20 border-purple-200 dark:border-purple-900/30 backdrop-blur-sm transition-all duration-200 py-2 px-4"
               onClick={() => onSelect(template.prompt)}
             >
-              {template.emoji} {template.title}
+              <span className="mr-2">{template.emoji}</span> {template.title}
             </Button>
           ))}
         </div>

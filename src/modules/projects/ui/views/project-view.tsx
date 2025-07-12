@@ -17,6 +17,7 @@ import Link from "next/link";
 import { FileExplorer } from "@/components/file-explorer";
 import { UserControl } from "@/components/user-control";
 import { useAuth } from "@clerk/nextjs";
+import { ErrorBoundary } from "react-error-boundary";
 
 interface Props {
   projectId: string;
@@ -36,16 +37,38 @@ export const ProjectView = ({ projectId }: Props) => {
           minSize={20}
           className="flex flex-col min-h-0"
         >
-          <Suspense fallback={<p>Loading project...</p>}>
-            <ProjectHeader projectId={projectId} />
-          </Suspense>
-          <Suspense fallback={<p>Loading messages...</p>}>
-            <MessagesContainer
-              projectId={projectId}
-              activeFragment={activeFragment}
-              setActiveFragment={setActiveFragment}
-            />
-          </Suspense>
+          <ErrorBoundary fallback={<p>Project Header Error</p>}>
+            <Suspense
+              fallback={
+                <div className="flex flex-col items-center justify-center p-8">
+                  <div className="w-10 h-10 border-4 border-gray-200 border-t-purple-600 rounded-full animate-spin mb-3"></div>
+                  <p className="text-gray-600 text-sm font-medium">
+                    Loading project...
+                  </p>
+                </div>
+              }
+            >
+              <ProjectHeader projectId={projectId} />
+            </Suspense>
+          </ErrorBoundary>
+          <ErrorBoundary fallback={<p>Messages Container Error</p>}>
+            <Suspense
+              fallback={
+                <div className="flex flex-col items-center justify-center p-8">
+                  <div className="w-10 h-10 border-4 border-gray-200 border-t-purple-600 rounded-full animate-spin mb-3"></div>
+                  <p className="text-gray-600 text-sm font-medium">
+                    Loading messages...
+                  </p>
+                </div>
+              }
+            >
+              <MessagesContainer
+                projectId={projectId}
+                activeFragment={activeFragment}
+                setActiveFragment={setActiveFragment}
+              />
+            </Suspense>
+          </ErrorBoundary>
         </ResizablePanel>
         <ResizableHandle className="hover:bg-primary transition-colors" />
         <ResizablePanel defaultSize={65} minSize={50}>

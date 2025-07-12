@@ -25,10 +25,10 @@ export function FragmentWeb({ data }: Props) {
   return (
     <div className="flex flex-col w-full h-full">
       <div className="p-2 border-b bg-sidebar flex items-center gap-x-2">
-      <Hint text="Refresh" side="bottom" align="start">
-        <Button size="sm" variant="outline" onClick={onRefresh}>
-          <RefreshCcwIcon />
-        </Button>
+        <Hint text="Refresh" side="bottom" align="start">
+          <Button size="sm" variant="outline" onClick={onRefresh}>
+            <RefreshCcwIcon />
+          </Button>
         </Hint>
         <Hint text="Click to copy" side="bottom">
           <Button

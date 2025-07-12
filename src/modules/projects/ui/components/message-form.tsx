@@ -112,7 +112,7 @@ export const MessageForm = ({ projectId }: Props) => {
             select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] 
             font-medium text-muted-foreground"
             >
-              <span>&#8984;</span>Enter
+              <span>&#8984;</span>Ctrl+Enter
             </kbd>
             &nbsp;to submit
           </div>

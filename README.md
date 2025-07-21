@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aura – AI-Powered SaaS Website Builder 🧠💻
 
-## Getting Started
+Introducing **Aura**, a cutting-edge AI-powered SaaS platform that helps you **generate, customize, and deploy full-stack web apps** — in minutes, not weeks.
 
-First, run the development server:
+Whether you're a **non-technical founder**, **freelancer**, or **developer**, Aura accelerates your web app journey from idea → fully deployable product with **zero setup friction** and **no code required**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Tech Stack Highlights
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🖥️ **Frontend**: Next.js, React, Tailwind CSS, shadcn/ui  
+- 🔌 **API Layer**: tRPC + TanStack Query for blazing fast type-safe data fetching  
+- 🗄️ **Backend**: Prisma ORM + PostgreSQL (hosted on [Neon](https://neon.tech))  
+- 🔐 **Auth & Billing**: Seamless user auth and subscription via [Clerk](https://clerk.dev)  
+- 🤖 **Agents & Automation**: [Inngest](https://www.inngest.com) for background jobs and OpenAI-powered flows  
+- 🛡️ **Secure Execution**: [E2B](https://e2b.dev) sandboxes + Docker-based sandbox templates  
+- 🧠 **AI Intelligence**: OpenAI agents for understanding requirements, generating logic, and adapting code
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌟 Key Features
 
-To learn more about Next.js, take a look at the following resources:
+1. **AI Agent-Powered Website Generation**  
+   Describe your idea and Aura's agents generate a full-stack site instantly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Live Code Tree View**  
+   Access and navigate the structured codebase of your project in real time.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Free & Pro Plans**  
+   Get started with core features for free — upgrade to Pro for advanced power tools.
 
-## Deploy on Vercel
+4. **Free Deployment Window**  
+   Instantly deploy and host your project for free for a limited time.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Built-in Auth + Billing**  
+   Out-of-the-box user authentication and subscription control.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. **Autonomous AI Agents**  
+   Agents can refactor, extend, or evolve your app with simple new prompts.
+
+7. **Agent Memory**  
+   Persistent memory allows agents to recall prior context and preferences for smarter updates.
+
+---
+
+## 💼 Use Cases
+
+- 🎨 **Freelancers & Agencies**  
+  Deliver production-ready apps at lightning speed.
+
+- 🧑‍💻 **Developers**  
+  Use Aura as a powerful boilerplate + AI coding assistant.
+
+- 🌍 **Non-technical Entrepreneurs**  
+  Build and launch your dream product — without touching code.
+
+---
+
+## 🛠️ About Aura
+
+Aura brings together modern full-stack tools, AI agents, and secure infrastructure into one seamless **developer + no-code hybrid platform**.
+
+> *The AI prompting can still be improved — open to collaborations with prompt engineers!*  
+> Working on Aura has been an incredible journey.
+
+---
+
+## 🚀 Try Aura
+
+👉 [Launch Aura](https://aura-psi-three.vercel.app/)  
+👉 DM me if you're interested in **testing**, **giving feedback**, or **collaborating**!
+

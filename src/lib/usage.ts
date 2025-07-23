@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 import { RateLimiterPrisma } from "rate-limiter-flexible";
 
 const FREE_POINTS = 5;
-const PRO_POINTS = 100;
+const PRO_POINTS = 1;
 const DURATION = 30 * 24 * 60 * 60;
 const GENERATION_COST = 1;
 
